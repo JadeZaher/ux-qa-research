@@ -1,0 +1,4 @@
+# LF everywhere: shell scripts break under CRLF, and plugins load on every OS.
+* text=auto eol=lf
+*.zip binary
+*.png binary

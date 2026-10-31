@@ -1,0 +1,4 @@
+# ux-qa-research: secrets and raw captures never leave the machine
+.secrets/
+passes/*/runs/
+passes/*/flows/

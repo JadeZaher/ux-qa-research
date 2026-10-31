@@ -1,0 +1,28 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ux-qa-research",
+  "description": "Single-plugin marketplace for ux-qa-research.",
+  "owner": {
+    "name": "JadeZaher"
+  },
+  "plugins": [
+    {
+      "name": "ux-qa-research",
+      "description": "Reproducible agent-swarm UX QA + research method for any web app: conductor-style uxqa/ study bundle, guarded session adapters, ui-only Playwright persona lanes with friction metrics and traces, route/API coverage, gold-task trends, a multi-lens UX research panel, triage against code, fix lanes, adversarial review and recorded verdicts.",
+      "version": "0.1.0",
+      "author": {
+        "name": "JadeZaher"
+      },
+      "source": "./",
+      "category": "testing",
+      "tags": [
+        "ux",
+        "qa",
+        "research",
+        "playwright",
+        "swarm",
+        "conductor"
+      ]
+    }
+  ]
+}

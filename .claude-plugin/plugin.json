@@ -1,0 +1,8 @@
+{
+  "name": "ux-qa-research",
+  "version": "0.1.0",
+  "description": "Reproducible agent-swarm UX QA + research method for any web app: a conductor-style study bundle (uxqa/), guarded session adapters, ui-only persona lanes with Playwright traces and friction metrics (dead/rage clicks, workarounds, abandonment), route/API coverage inventory (SvelteKit, Next.js app/pages), gold tasks with cross-pass trends, a multi-lens UX research panel, triage against code, fix lanes, adversarial review and recorded verdicts.",
+  "author": {
+    "name": "JadeZaher"
+  }
+}

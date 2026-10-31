@@ -1,0 +1,10 @@
+# Build output — attach zips to a GitHub release instead of committing them.
+dist/
+
+node_modules/
+__pycache__/
+*.pyc
+*.log
+*.tmp
+.DS_Store
+Thumbs.db

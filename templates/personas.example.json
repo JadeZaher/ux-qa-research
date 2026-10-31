@@ -1,0 +1,19 @@
+{
+ "seed": {
+  "orgs": [{ "handle": "qa-northwind", "name": "Northwind Cooperative", "visibility": "PUBLIC" }],
+  "groups": [{ "handle": "qa-northwind-volunteers", "name": "Volunteers", "org": "qa-northwind", "visibility": "PRIVATE" }]
+ },
+ "personas": [
+  { "handle": "qa-owner-amara", "name": "Amara Osei", "archetype": "org owner", "segment": "admins", "goal": "Set up the organisation and invite the volunteer group lead", "context": "Runs a small cooperative, comfortable with web tools, short on time", "patience": 3, "constraints": {}, "modelTier": "sonnet", "seed": { "platformRole": "USER", "org": "qa-northwind", "orgRole": "OWNER", "groups": [{ "handle": "qa-northwind-volunteers", "role": "ADMIN" }] } },
+  { "handle": "qa-member-jules", "name": "Jules Martin", "archetype": "new member", "segment": "members", "goal": "Join the volunteers group and find this week's tasks", "context": "Uses the app in French on a phone; first visit", "patience": 2, "constraints": { "locale": "fr-FR", "width": 390 }, "modelTier": "haiku", "seed": { "platformRole": "USER", "org": "qa-northwind", "orgRole": "MEMBER", "groups": [] } },
+  { "handle": "qa-member-ravi", "name": "Ravi Iyer", "archetype": "screen-reader user", "segment": "members", "goal": "Update his profile and notification settings", "context": "Blind, expert screen-reader user", "patience": 3, "constraints": { "a11yTreeOnly": true, "keyboardOnly": true }, "modelTier": "sonnet", "seed": { "platformRole": "USER", "org": "qa-northwind", "orgRole": "MEMBER", "groups": [{ "handle": "qa-northwind-volunteers", "role": "USER" }] } }
+ ],
+ "lanes": [
+  { "name": "onboarding", "kind": "ux", "personas": ["qa-owner-amara", "qa-member-jules"], "journey": "Amara sets up the org and invites Jules; Jules joins and finds tasks", "modelTier": "sonnet" },
+  { "name": "access", "kind": "ux", "personas": ["qa-member-ravi"], "journey": "Ravi edits profile and notifications with keyboard and accessibility tree only", "modelTier": "sonnet" },
+  { "name": "gold", "kind": "gold", "personas": ["qa-member-jules"], "journey": "Run the gold tasks", "modelTier": "haiku", "goldTasks": ["gold-join-group"] },
+  { "name": "probe", "kind": "probe", "personas": ["qa-member-jules"], "journey": "Check members cannot change org settings through the API", "modelTier": "sonnet" }
+ ],
+ "retired": [],
+ "rationale": "Example cast: one admin, one constrained newcomer, one assistive-technology user, one gold lane, one probe lane."
+}
